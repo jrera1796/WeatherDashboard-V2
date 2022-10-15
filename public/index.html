@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <!-- -->
-  <script src="./js/forecast.js"></script>
   <title>Weather Dashboard V2</title>
 </head>
 
@@ -23,8 +22,8 @@
   </header>
   <section class="maincontainer">
     <div class="searchcontainer">
-      <input type="text" id="searchedcity" class="searchfield">
-      <button class="searchbutton">Submit</button>
+      <input onkeydown="enter(this)" type="text" id="searchedcity" class="searchfield">
+      <button id="searchbutton" onclick="grabWeather(cityInput.value)">Submit</button>
       <!-- Previously Searched Cities/Hide Search on Mobile-->
       <ul class="history">
         <!-- Scrollable -->
@@ -38,6 +37,7 @@
     
   </section>
   <footer>Footer</footer>
+<script src="./js/fescript.js"></script>
 </body>
 
 </html>
