@@ -6,11 +6,24 @@ function grabWeather(c) {
     console.log('Please enter a city')
   }
   else {
+    // debugger;
     cityInput.value = ""
-    // fetch(`/api/weather/${c}`)
-    // .then(response => {
-    //   return response.json();
-    // })
+//     let data = {
+// cn: c
+//     }
+// let url = new URL('/api/weather');
+// for(let k in data){
+//   url.searchParams.append(k, data[k]);
+// }
+debugger;
+    fetch(`/api/weather/${c}`)
+    .then((result) =>{
+      console.log(result)
+    })
+    .then((response)=>{
+      console.log(response)
+    })
+    
   }
 }
 
