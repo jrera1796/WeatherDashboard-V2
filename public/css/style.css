@@ -7,6 +7,12 @@ body, html{
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  background-image: url("https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  color: white;
+  background-size: cover;
+}
+#title{
+  font-family: 'Pacifico', cursive;
 }
 
 /* Header, Nav, Footer*/
@@ -15,7 +21,7 @@ header {
   justify-content: space-between;
   background-color: pink;
   border: 2px solid black;
-  display: inline-flex;
+  /* display: inline-flex; */
   width: 100vw;
 }
 
@@ -31,7 +37,7 @@ footer {
 /* Main Container */
 
 .maincontainer {
-  background-color: rgb(253, 74, 74);
+  /* background-color: rgb(253, 74, 74); */
   border: 2px dotted white;
   justify-content: space-between;
   display: grid;
@@ -44,19 +50,19 @@ footer {
 
 .searchcontainer {
   border: 2px dotted rgba(203, 37, 37);
-  background-color: rgba(0, 0, 255, 0.363);
+  /* background-color: rgba(0, 0, 255, 0.363); */
 }
 
 .history {
   width: inherit;
   /* add something pretty here for the background */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 /* Displayed results */
 
 .dispresults {
-  background-color: rgba(0, 255, 255, 0.322);
+  /* background-color: rgba(0, 255, 255, 0.322); */
 }
 
 /* Media Queries */
@@ -64,6 +70,10 @@ footer {
 /* @media only screen and (max-width: 778px){} */
 
 @media only screen and (max-width: 480px) {
+body{
+  background-size: contain;
+}
+
   .maincontainer {
     display: grid;
     grid-template-columns: 100%;
@@ -75,7 +85,7 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  
+
   footer {
     background-color: rgba(0, 0, 0, 0.642);
     height: 2rem;
