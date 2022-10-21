@@ -25,8 +25,8 @@ async function grabData(cn) {
 }
 
 async function grabData2(cn) {
-  var currentWeather = "https://api.openweathermap.org/data/2.5/forecast?q=" + cn + "&units=imperial&appid=" + process.env.API_KEY;
-  const r2 = await fetch(currentWeather)
+  var forecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cn + "&units=imperial&appid=" + process.env.API_KEY;
+  const r2 = await fetch(forecast)
   const c2 = await r2.json;
   return c2
 }
