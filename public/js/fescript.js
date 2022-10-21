@@ -1,30 +1,50 @@
-var cityInput = document.getElementById('searchedcity')
+const cityInput = document.getElementById('searchedcity')
+const cityTitle = document.getElementById('citytitle')
+const cityNow = document.getElementById('citynow')
 
-//Main code
 function grabWeather(c) {
   if (c == '') {
     console.log('Please enter a city')
   }
   else {
-    // debugger;
     cityInput.value = ""
-//     let data = {
-// cn: c
-//     }
-// let url = new URL('/api/weather');
-// for(let k in data){
-//   url.searchParams.append(k, data[k]);
-// }
-debugger;
-    fetch(`/api/weather/${c}`)
-    .then((result) =>{
-      console.log(result)
+    fetchData(c).then(cityData => {
+      let currentw = cityData[0].current
+      //Fix error handling
+      // if (currentw.cod !== 200) { console.log('Error') }
+      cityTitle.innerHTML = currentw.name
+      let arr = cityData[0].current.main
+
+      Array.from(cityNow.children).forEach(element => {
+        // console.log(element.className)
+        Object.keys(arr).forEach(key => {
+          // console.log(key)
+          if (key === element.className) {
+            element.innerHTML = arr[key]
+            // console.log('match')
+          }
+          else {
+            // console.log('these dont match')
+          }
+        })
+      })
     })
-    .then((response)=>{
-      console.log(response)
-    })
-    
   }
+}
+
+
+
+
+
+
+
+
+
+
+async function fetchData(cd) {
+  const response = await fetch(`./api/weather?city=${cd}`);
+  const cdata = await response.json();
+  return cdata;
 }
 
 // Enter button
