@@ -42,6 +42,7 @@ footer {
   justify-content: space-between;
   display: grid;
   grid-template-columns: 20% 80%;
+  padding-bottom: 2%;
   height: 100vh;
   width: 100vw;
 }
@@ -61,8 +62,22 @@ footer {
 
 /* Displayed results */
 
-.dispresults {
-  /* background-color: rgba(0, 255, 255, 0.322); */
+/* .dispresults {
+  background-color: rgba(0, 255, 255, 0.322);
+} */
+
+.citycast{
+  height: fit-content;
+  padding: 5%
+}
+
+.rainplaceholder{
+  background-image: url("https://media2.giphy.com/media/l3vRbNFMuFt5Zm372/giphy.gif?cid=790b76119c85037173bb61630a7216418088371eb6c10ade&rid=giphy.gif&ct=g");
+  background-size: cover;
+  width: 100px;
+  height: 200px;
+  text-align: center;
+  text-transform: translateY(-50);
 }
 
 /* Media Queries */
