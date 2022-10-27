@@ -3,11 +3,22 @@
   padding: 0;
 }
 
+@keyframes slideIn {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
+
 body, html{
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background-image: url("https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   color: white;
   background-size: cover;
 }
@@ -21,7 +32,6 @@ header {
   justify-content: space-between;
   background-color: pink;
   border: 2px solid black;
-  /* display: inline-flex; */
   width: 100vw;
 }
 
@@ -37,7 +47,7 @@ footer {
 /* Main Container */
 
 .maincontainer {
-  /* background-color: rgb(253, 74, 74); */
+  background-color: rgb(253, 74, 74);
   border: 2px dotted white;
   justify-content: space-between;
   display: grid;
@@ -47,6 +57,15 @@ footer {
   width: 100vw;
 }
 
+#citynow{
+  background-color: black;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 20fr 20fr 20fr 20fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+
 /* Search Box */
 
 .searchcontainer {
@@ -55,18 +74,19 @@ footer {
 }
 
 .history {
-  width: inherit;
-  /* add something pretty here for the background */
-  /* background-color: aqua; */
+  width: inherit
 }
 
-/* Displayed results */
+#citytitle{
+  text-align: center;
+}
 
-/* .dispresults {
-  background-color: rgba(0, 255, 255, 0.322);
-} */
+#citynow{
+  background-color: black;
+  text-align: center;
+}
 
-.citycast{
+#citycast{
   height: fit-content;
   padding: 5%
 }
@@ -95,10 +115,50 @@ body{
     grid-template-rows: 10% 90%;
   }
 
-  .searchcontainer {
+  .menu-button{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+
+  .menu-hidden{
+    display: none;
+  }
+  
+  .menu-show{
     display: flex;
+  animation: slideIn 500ms ease-in-out forwards;
+  transform-origin: top center;
+  }
+  
+  .searchcontainer {
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  #citynow{
+    background-color: black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20fr 20fr 20fr 20fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  #citynow > div:nth-child(1){
+    font-size: 4rem;
+  grid-column: 1/6;
+  grid-row: 1/5;
+  }
+  
+  #citynow > div:nth-child(2){
+    grid-column: 2/2;
+    grid-row: 5/6;
+  }
+  
+  #citynow > div:nth-child(3){
+    grid-column: 3/3;
+    grid-row: 5/6;
   }
 
   footer {

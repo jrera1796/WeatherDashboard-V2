@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -17,15 +17,18 @@
 <body>
   <header>
     <h1 id="title">Sphere</h1>
+    <span class="menu-button">
+      <i>O</i>
+    </span>
     <nav>
+      
       <ul class="navlist">
-        <!-- <li>Thing 1</li>
-        <li>Thing 2</li> -->
+<!--  -->
       </ul>
     </nav>
   </header>
   <section class="maincontainer">
-    <div class="searchcontainer">
+    <div class="searchcontainer menu-hidden">
       <input onkeydown="enter(this)" type="text" id="searchedcity" class="searchfield">
       <button id="searchbutton" onclick="grabWeather(cityInput.value)">Submit</button>
       <!-- Previously Searched Cities/Hide Search on Mobile-->
@@ -39,16 +42,14 @@
       <h1 id="citytitle"></h1>
 
       <div id="citynow">
-        <p class="temp">Temp </p>
-        <p class="feels_like">Feels Like </p>
-        <p class="temp_min">Temp Min </p>
-        <p class="temp_max">Temp Max </p>
+        <div class="temp">Temp </div>
+        <div class="temp_min">Temp Min </div>
+        <div class="temp_max">Temp Max </div>
       </div>
 
       <div id="citycast">
         <div class="rainplaceholder">
           <p class="temp">Temp </p>
-          <p class="feels_like">Feels Like </p>
           <p class="temp_min">Temp Min </p>
           <p class="temp_max">Temp Max </p>
         </div>
@@ -57,6 +58,7 @@
 
   </section>
   <footer>Footer</footer>
+  <script src="https://kit.fontawesome.com/f14c85c842.js" crossorigin="anonymous"></script>
   <script src="./js/fescript.js"></script>
 </body>
 

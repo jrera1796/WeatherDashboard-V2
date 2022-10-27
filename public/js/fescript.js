@@ -13,7 +13,7 @@ function grabWeather(c) {
         let currentw = cityData[0].current
         let currentf = cityData[1].forecast
         let currentMain = currentw.main
-        let forecastArray = currentf.list
+        let forecastMain = currentf.list
         cityTitle.innerHTML = currentw.name
         console.log(currentf)
         Array.from(cityNow.children).forEach(element => {
